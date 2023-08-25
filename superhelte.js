@@ -14,7 +14,7 @@ function showSuperhero(superhero) {
   const copy = template.cloneNode(true);
 
   copy.querySelector("h2").textContent = superhero.alias;
-  copy.querySelector("p.realname").textContent = superhero.realname;
+  copy.querySelector("p.realname").textContent = superhero.realName;
   copy.querySelector("p.alias").textContent = superhero.alias;
   copy.querySelector("p.origin").textContent = superhero.origin;
   copy.querySelector("p.weakness").textContent = superhero.weakness;
