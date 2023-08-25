@@ -1,11 +1,11 @@
 //fetche
 fetch("https://kea-alt-del.dk/t7/superheroes/")
   .then((res) => res.json())
-  .then(showHeroes);
+  .then(showSuperheroes);
 
-function showSuperheroes(heroes) {
+function showSuperheroes(superheroes) {
   //loope
-  heroes.forEach(showSuperhero);
+  superheroes.forEach(showSuperhero);
 }
 
 function showSuperhero(superhero) {
