@@ -23,6 +23,13 @@ function showSuperhero(superhero) {
   copy.querySelector("p.height").textContent = superhero.height;
   copy.querySelector("p.powers").textContent = superhero.powers;
 
+  copy.querySelector(".birthday").textContent =
+    superhero.birthday.day +
+    "/" +
+    superhero.birthday.month +
+    "/" +
+    superhero.birthday.year;
+
   copy.querySelector("img").src = superhero.image;
 
   const parent = document.querySelector(".grid");
