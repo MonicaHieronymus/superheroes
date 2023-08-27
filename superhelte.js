@@ -11,6 +11,8 @@ function showSuperheroes(superheroes) {
 function showSuperhero(superhero) {
   //clone, ændre, appende
   const template = document.querySelector("template").content;
+  const parent = document.querySelector(".grid");
+
   const copy = template.cloneNode(true);
 
   copy.querySelector("h2").textContent = superhero.alias;
@@ -19,7 +21,8 @@ function showSuperhero(superhero) {
   copy.querySelector("p.origin").textContent = superhero.origin;
   copy.querySelector("p.weakness").textContent = superhero.weakness;
   copy.querySelector("p.active").textContent = superhero.active;
-  copy.querySelector("p.evil").textContent = superhero.evil;
+  copy.querySelector("p.isEvil").textContent = superhero.isEvil;
+
   copy.querySelector("p.height").textContent = superhero.height;
   copy.querySelector("p.powers").textContent = superhero.powers;
 
@@ -32,6 +35,5 @@ function showSuperhero(superhero) {
 
   copy.querySelector("img").src = superhero.image;
 
-  const parent = document.querySelector(".grid");
   parent.appendChild(copy);
 }
