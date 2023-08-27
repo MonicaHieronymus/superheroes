@@ -21,7 +21,12 @@ function showSuperhero(superhero) {
   copy.querySelector("p.origin").textContent = superhero.origin;
   copy.querySelector("p.weakness").textContent = superhero.weakness;
   copy.querySelector("p.active").textContent = superhero.active;
-  copy.querySelector("p.isEvil").textContent = superhero.isEvil;
+
+  if (superhero.isEvil) {
+    const superheroes = document.querySelectorAll("p.isEvil");
+    superheroes.forEach((superhero) => superhero.classList.add("bad"));
+    copy.querySelector("p.isEvil").textContent = superhero.isEvil;
+  }
 
   copy.querySelector("p.height").textContent = superhero.height;
   copy.querySelector("p.powers").textContent = superhero.powers;
